@@ -18,3 +18,4 @@ A minimal, responsive academic profile website for GitHub Pages.
 - Do not publish private information. The contact email in this page will be visible to visitors.
 
 No build tools, frameworks, or paid services are required.
+Website deployment refreshed.
