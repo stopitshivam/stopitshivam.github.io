@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic profile of Shivam Sharma, MS student in Mathematics and Computing at IISER Pune.">
+  <title>Shivam Sharma | Mathematics and Computing</title>
+  <style>
+    :root {
+      --ink: #20242b;
+      --muted: #626b78;
+      --accent: #315b7d;
+      --line: #e5e9ee;
+      --paper: #ffffff;
+      --background: #f5f7f9;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+    .container {
+      width: min(880px, calc(100% - 40px));
+      margin: 56px auto;
+      padding: 54px 64px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+    header { padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 3.1rem);
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+      font-weight: 600;
+    }
+    .subtitle { margin: 12px 0 2px; color: var(--accent); font-size: 1.15rem; }
+    .institution { margin: 0; color: var(--muted); font-size: 1rem; }
+    section { padding-top: 28px; }
+    h2 {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    p { margin: 0; }
+    ul { margin: 0; padding-left: 22px; }
+    li { padding: 2px 0; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-family: Arial, sans-serif; font-size: 0.82rem; font-weight: 600; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact p + p { margin-top: 5px; }
+    footer {
+      margin-top: 38px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+    @media (max-width: 640px) {
+      .container { width: 100%; margin: 0; padding: 34px 24px; border: 0; }
+      th, td { padding-right: 8px; font-size: 0.92rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Shivam Sharma</h1>
+      <p class="subtitle">MS Student | Mathematics and Computing</p>
+      <p class="institution">Indian Institute of Science Education and Research (IISER) Pune</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am currently in the first semester of MS in Mathematics and Computing at IISER Pune. My academic interests lie in abstract algebra, specifically Ring Theory and its application in Cryptography.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <table>
+        <thead>
+          <tr><th>Qualification</th><th>Institution</th><th>Year</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>MS Mathematics and Computing</td><td>IISER Pune</td><td>2026–2028</td></tr>
+          <tr><td>B.Sc. (Hons.) Mathematics</td><td>University of Delhi</td><td>2023–2026</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Ring Theory</li>
+        <li>Number Theory</li>
+        <li>Cryptography</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <p><strong>Programming:</strong> Python, SageMath, Mathematica</p>
+      <p><strong>Other Skills:</strong> Problem Solving, Creative Writing</p>
+    </section>
+
+    <section id="languages">
+      <h2>Languages</h2>
+      <p>English · Hindi · Maithili · Bhojpuri</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p><strong>Institution:</strong> Indian Institute of Science Education and Research (IISER) Pune</p>
+      <p><strong>Email:</strong> <a href="mailto:sharma.shivam@students.iiserpune.ac.in">sharma.shivam@students.iiserpune.ac.in</a></p>
+    </section>
+
+    <footer>Shivam Sharma | IISER Pune</footer>
+  </main>
+</body>
+</html>
