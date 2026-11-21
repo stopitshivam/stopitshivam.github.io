@@ -2,28 +2,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="Miao1ltdUVbmnYrNX-hV9Lrj5KHf-5D3ptwhADYyP_Y" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Academic website of Shivam Sharma, MS student in Mathematics and Computing at IISER Pune.">
 
-<title>Shivam Sharma</title>
+  <title>Shivam Sharma | Mathematics and Computing</title>
 
-<meta name="author" content="Shivam Sharma">
-<meta property="og:site_name" content="Shivam Sharma">
-<meta property="og:title" content="Shivam Sharma | Academic Website">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://stopitshivam.github.io/">
+  <meta name="author" content="Shivam Sharma">
+  <meta property="og:site_name" content="Shivam Sharma">
+  <meta property="og:title" content="Shivam Sharma | Academic Website">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stopitshivam.github.io/">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Shivam Sharma",
-  "alternateName": "Shivam Sharma Academic Website",
-  "url": "https://stopitshivam.github.io/"
-}
-</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Shivam Sharma",
+    "alternateName": "Shivam Sharma Academic Website",
+    "url": "https://stopitshivam.github.io/"
+  }
+  </script>
 
   <style>
     :root {
@@ -130,7 +129,6 @@
     .navigation {
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      padding: 0;
     }
 
     .tabs {
@@ -178,8 +176,6 @@
       display: block;
     }
 
-    /* Hide repeated section headings */
-
     .panel h2 {
       display: none;
     }
@@ -218,22 +214,43 @@
       margin-bottom: 7px;
     }
 
-    /* CV button */
+    /* CV link */
 
-    .cv-button {
-      display: inline-block;
-      padding: 9px 18px;
-      margin-top: 8px;
-      border: 1px solid var(--accent);
+    .cv-link {
       color: var(--accent);
       text-decoration: none;
-      font-size: 16px;
-      transition: 0.2s;
     }
 
-    .cv-button:hover {
-      background: var(--accent);
-      color: white;
+    .cv-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Further section */
+
+    .further-quote {
+      margin: 0 0 30px;
+      padding: 0 0 0 20px;
+      border-left: 2px solid var(--line);
+      font-size: 19px;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .quote-author {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 16px;
+      font-style: normal;
+    }
+
+    .further-photo {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: 35px auto 0;
+      border: 1px solid var(--line);
     }
 
     /* Footer */
@@ -288,6 +305,10 @@
         width: calc(100% - 40px);
         padding-top: 28px;
       }
+
+      .further-quote {
+        font-size: 17px;
+      }
     }
 
     @media (max-width: 380px) {
@@ -328,6 +349,12 @@
           </a>
         </p>
 
+        <p class="email">
+          <a href="mailto:sharma.shivam@students.iiserpune.ac.in">
+            sharma.shivam@students.iiserpune.ac.in
+          </a>
+        </p>
+
       </div>
 
       <img
@@ -345,8 +372,7 @@
 
       <div class="tabs" role="tablist">
 
-        <button
-          class="tab"
+        <button class="tab"
           id="tab-about"
           role="tab"
           aria-selected="true"
@@ -356,8 +382,7 @@
           About Me
         </button>
 
-        <button
-          class="tab"
+        <button class="tab"
           id="tab-education"
           role="tab"
           aria-selected="false"
@@ -367,8 +392,7 @@
           Education
         </button>
 
-        <button
-          class="tab"
+        <button class="tab"
           id="tab-research"
           role="tab"
           aria-selected="false"
@@ -378,8 +402,7 @@
           Research
         </button>
 
-        <button
-          class="tab"
+        <button class="tab"
           id="tab-cv"
           role="tab"
           aria-selected="false"
@@ -389,8 +412,7 @@
           CV
         </button>
 
-        <button
-          class="tab"
+        <button class="tab"
           id="tab-contact"
           role="tab"
           aria-selected="false"
@@ -398,6 +420,16 @@
           tabindex="-1"
           onclick="showPanel('contact', this)">
           Contact
+        </button>
+
+        <button class="tab"
+          id="tab-further"
+          role="tab"
+          aria-selected="false"
+          aria-controls="further"
+          tabindex="-1"
+          onclick="showPanel('further', this)">
+          Further
         </button>
 
       </div>
@@ -410,8 +442,7 @@
 
       <!-- About Me -->
 
-      <section
-        class="panel active"
+      <section class="panel active"
         id="about"
         role="tabpanel"
         aria-labelledby="tab-about">
@@ -419,17 +450,19 @@
         <h2>About Me</h2>
 
         <p>
-          I am currently doing an MS in Mathematics and Computing
+          I am currently pursuing an MS in Mathematics and Computing
           at the
           <a class="institution-link"
              href="https://www.iiserpune.ac.in/"
              target="_blank"
-             rel="noopener noreferrer">Indian Institute of Science Education and Research (IISER) Pune</a>.
+             rel="noopener noreferrer">
+            Indian Institute of Science Education and Research (IISER) Pune
+          </a>.
         </p>
 
         <p>
           My academic interests lie primarily in abstract algebra,
-          particularly Ring Theory and Number Theory and their
+          particularly Ring Theory, Number Theory, and their
           applications in Cryptography.
         </p>
 
@@ -438,8 +471,7 @@
 
       <!-- Education -->
 
-      <section
-        class="panel"
+      <section class="panel"
         id="education"
         role="tabpanel"
         aria-labelledby="tab-education"
@@ -490,8 +522,7 @@
 
       <!-- Research -->
 
-      <section
-        class="panel"
+      <section class="panel"
         id="research"
         role="tabpanel"
         aria-labelledby="tab-research"
@@ -499,14 +530,12 @@
 
         <h2>Research</h2>
 
-        <p>
-          My research interests include:
-        </p>
+        <p>My research interests include:</p>
 
         <ul class="research-list">
-          <li>Ring Theory.</li>
-          <li>Number Theory.</li>
-          <li>Cryptography.</li>
+          <li>Ring Theory</li>
+          <li>Number Theory</li>
+          <li>Cryptography</li>
         </ul>
 
       </section>
@@ -514,8 +543,7 @@
 
       <!-- CV -->
 
-      <section
-        class="panel"
+      <section class="panel"
         id="cv"
         role="tabpanel"
         aria-labelledby="tab-cv"
@@ -523,23 +551,22 @@
 
         <h2>Curriculum Vitae</h2>
 
-       <p>
-  My curriculum vitae can be accessed
-  <a
-    href="https://drive.google.com/file/d/1L4itAMqI7-j89zP4iOcQpTXU4VsugHLx/view?usp=drive_link"
-    target="_blank"
-    rel="noopener noreferrer">
-    here
-  </a>.
-</p>
+        <p>
+          My curriculum vitae is available
+          <a class="cv-link"
+             href="https://drive.google.com/file/d/1L4itAMqI7-j89zP4iOcQpTXU4VsugHLx/view?usp=drive_link"
+             target="_blank"
+             rel="noopener noreferrer">
+            here
+          </a>.
+        </p>
 
       </section>
 
 
       <!-- Contact -->
 
-      <section
-        class="panel"
+      <section class="panel"
         id="contact"
         role="tabpanel"
         aria-labelledby="tab-contact"
@@ -556,13 +583,51 @@
 
       </section>
 
+
+      <!-- Further -->
+
+      <section class="panel"
+        id="further"
+        role="tabpanel"
+        aria-labelledby="tab-further"
+        hidden>
+
+        <h2>Further</h2>
+
+        <blockquote class="further-quote">
+
+          "If it was so, it might be; and if it were so,
+          it would be but as it isn't, it ain't.
+          That's logic."
+
+          <span class="quote-author">
+            — Lewis Carroll
+          </span>
+
+        </blockquote>
+
+        <img
+          src="further-photo.jpg"
+          alt="Handwritten quotation"
+          class="further-photo"
+        >
+
+      </section>
+
     </main>
 
 
     <!-- Footer -->
 
     <footer>
-      © Shivam Sharma
+      © 2026 Shivam Sharma. All rights reserved.
+      <br>
+      <a class="institution-link"
+         href="https://www.iiserpune.ac.in/"
+         target="_blank"
+         rel="noopener noreferrer">
+        IISER Pune
+      </a>
     </footer>
 
   </div>
