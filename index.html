@@ -102,19 +102,17 @@
       border: 1px solid var(--line);
     }
 
-    /* Remove underline from all email links */
+    /* Email links: underline only on hover */
 
     a[href^="mailto:"] {
       color: var(--accent);
       text-decoration: none !important;
-      border-bottom: none !important;
+      border-bottom: none;
     }
 
     a[href^="mailto:"]:hover,
-    a[href^="mailto:"]:focus,
-    a[href^="mailto:"]:visited {
-      text-decoration: none !important;
-      border-bottom: none !important;
+    a[href^="mailto:"]:focus-visible {
+      text-decoration: underline !important;
     }
 
     /* University hyperlinks */
@@ -352,6 +350,12 @@
              target="_blank"
              rel="noopener noreferrer">
             Indian Institute of Science Education and Research (IISER) Pune
+          </a>
+        </p>
+
+        <p class="email">
+          <a href="mailto:sharma.shivam@students.iiserpune.ac.in">
+            sharma.shivam@students.iiserpune.ac.in
           </a>
         </p>
 
