@@ -93,15 +93,6 @@
       font-size: 16px;
     }
 
-    .email a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .email a:hover {
-      text-decoration: none;
-    }
-
     .photo {
       width: 145px;
       height: 165px;
@@ -109,6 +100,21 @@
       object-position: center;
       flex-shrink: 0;
       border: 1px solid var(--line);
+    }
+
+    /* Remove underline from all email links */
+
+    a[href^="mailto:"] {
+      color: var(--accent);
+      text-decoration: none !important;
+      border-bottom: none !important;
+    }
+
+    a[href^="mailto:"]:hover,
+    a[href^="mailto:"]:focus,
+    a[href^="mailto:"]:visited {
+      text-decoration: none !important;
+      border-bottom: none !important;
     }
 
     /* University hyperlinks */
