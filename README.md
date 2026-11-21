@@ -15,7 +15,7 @@ I am currently in the first semester of MS in Mathematics and Computing at IISER
 | Qualification | Institution | Year |
 |---|---|---|
 | MS Mathematics and Computing | IISER Pune | 2026 - 2028 |
-| B.Sc. (Hons.) Mathematics | P.G.D.A.V. College (Evening), University of Delhi | 2023 - 2026 |
+| B.Sc. (Hons.) Mathematics | University of Delhi | 2023 - 2026 |
 
 ## Research Interests
 
