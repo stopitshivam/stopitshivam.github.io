@@ -1,21 +1,44 @@
-# Shivam Sharma — Academic Profile
 
-A minimal, responsive academic profile website for GitHub Pages.
+# Shivam Sharma
 
-## Publish with GitHub Pages
+### MS Student | Mathematics and Computing
+**Indian Institute of Science Education and Research (IISER) Pune**
 
-1. Create a **public** GitHub repository named exactly `YOUR-USERNAME.github.io`.
-2. Upload `index.html` from this folder to the repository's root (the top level).
-3. Open the repository's **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch **main** and folder **/(root)**, then click **Save**.
-6. Wait for the deployment. Your website will be available at `https://YOUR-USERNAME.github.io/`.
+---
 
-## Customise
+## About Me
 
-- Edit `index.html` to change the text, email, or design.
-- The circular “SS” monogram is a text placeholder. To use a photograph, replace the `<div class="monogram"...>` element with an `<img>` element and add the image file to the repository.
-- Do not publish private information. The contact email in this page will be visible to visitors.
+I am currently in the first semester of MS in Mathematics and Computing at IISER Pune. My academic interests lie in abstract algebra, specifically Ring Theory and it's application in Cryptography.
 
-No build tools, frameworks, or paid services are required.
-Website deployment refreshed.
+## Education
+
+| Qualification | Institution | Year |
+|---|---|---|
+| MS Mathematics and Computing | IISER Pune | 2026 - 2028 |
+| B.Sc. (Hons.) Mathematics | P.G.D.A.V. College (Evening), University of Delhi | 2023 - 2026 |
+
+## Research Interests
+
+- Ring Theory
+- Number Theory
+- Cryptography
+
+## Technical Skills
+
+- **Programming:** Python, SageMath, Mathematica
+- **Other Skills:** Problem Solving, Creative Writing
+
+
+## Languages
+
+English · Hindi · Maithili · Bhojpuri
+
+## Contact
+
+**Institution:** Indian Institute of Science Education and Research (IISER) Pune
+
+**Email:** [sharma.shivam@students.iiserpune.ac.in](mailto:sharma.shivam@students.iiserpune.ac.in)
+
+---
+
+*Shivam Sharma | IISER Pune*
