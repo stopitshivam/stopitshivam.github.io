@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,15 +95,15 @@
       border: 1px solid var(--line);
     }
 
-    .affiliation a,
-    .institution a {
+    /* University hyperlinks */
+
+    .institution-link {
       font-style: italic;
       color: var(--muted);
       text-decoration: none;
     }
 
-    .affiliation a:hover,
-    .institution a:hover {
+    .institution-link:hover {
       color: var(--accent);
       text-decoration: underline;
     }
@@ -160,7 +161,8 @@
       display: block;
     }
 
-    /* Hide repeated section headings inside the content */
+    /* Hide repeated section headings */
+
     .panel h2 {
       display: none;
     }
@@ -289,9 +291,11 @@
   <div class="page">
 
     <!-- Profile header -->
+
     <header class="profile">
 
       <div class="profile-info">
+
         <h1>Shivam Sharma</h1>
 
         <p class="designation">
@@ -299,7 +303,8 @@
         </p>
 
         <p class="affiliation">
-          <a href="https://www.iiserpune.ac.in/"
+          <a class="institution-link"
+             href="https://www.iiserpune.ac.in/"
              target="_blank"
              rel="noopener noreferrer">
             Indian Institute of Science Education and Research (IISER) Pune
@@ -311,6 +316,7 @@
             sharma.shivam@students.iiserpune.ac.in
           </a>
         </p>
+
       </div>
 
       <img
@@ -322,7 +328,8 @@
     </header>
 
 
-    <!-- Navigation tabs -->
+    <!-- Navigation -->
+
     <nav class="navigation" aria-label="Main navigation">
 
       <div class="tabs" role="tablist">
@@ -387,9 +394,11 @@
 
 
     <!-- Main content -->
+
     <main>
 
       <!-- About Me -->
+
       <section
         class="panel active"
         id="about"
@@ -400,8 +409,11 @@
 
         <p>
           I am currently pursuing an MS in Mathematics and Computing
-          at the Indian Institute of Science Education and Research
-          (IISER) Pune.
+          at the
+          <a class="institution-link"
+             href="https://www.iiserpune.ac.in/"
+             target="_blank"
+             rel="noopener noreferrer">Indian Institute of Science Education and Research (IISER) Pune</a>.
         </p>
 
         <p>
@@ -414,6 +426,7 @@
 
 
       <!-- Education -->
+
       <section
         class="panel"
         id="education"
@@ -424,12 +437,14 @@
         <h2>Education</h2>
 
         <div class="entry">
+
           <p class="entry-title">
             MS Mathematics and Computing
           </p>
 
           <p class="institution">
-            <a href="https://www.iiserpune.ac.in/"
+            <a class="institution-link"
+               href="https://www.iiserpune.ac.in/"
                target="_blank"
                rel="noopener noreferrer">
               Indian Institute of Science Education and Research (IISER) Pune
@@ -437,15 +452,18 @@
           </p>
 
           <p class="date">2026 – 2028</p>
+
         </div>
 
         <div class="entry">
+
           <p class="entry-title">
             B.Sc. (Hons.) Mathematics
           </p>
 
           <p class="institution">
-            <a href="https://www.du.ac.in/"
+            <a class="institution-link"
+               href="https://www.du.ac.in/"
                target="_blank"
                rel="noopener noreferrer">
               University of Delhi
@@ -453,12 +471,14 @@
           </p>
 
           <p class="date">2023 – 2026</p>
+
         </div>
 
       </section>
 
 
       <!-- Research -->
+
       <section
         class="panel"
         id="research"
@@ -482,6 +502,7 @@
 
 
       <!-- CV -->
+
       <section
         class="panel"
         id="cv"
@@ -507,6 +528,7 @@
 
 
       <!-- Contact -->
+
       <section
         class="panel"
         id="contact"
@@ -529,14 +551,16 @@
 
 
     <!-- Footer -->
+
     <footer>
-      Shivam Sharma | IISER Pune
+      © Shivam Sharma
     </footer>
 
   </div>
 
 
   <!-- Tab switching script -->
+
   <script>
     function showPanel(panelId, clickedTab) {
 
