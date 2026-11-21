@@ -2,233 +2,618 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academic profile of Shivam Sharma, MS student in Mathematics and Computing at IISER Pune.">
-  <title>Shivam Sharma | Mathematics and Computing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Academic website of Shivam Sharma, MS student in Mathematics and Computing at IISER Pune.">
 
-  <style>
-    :root {
-      --ink: #20242b;
-      --muted: #626b78;
-      --accent: #315b7d;
-      --line: #e5e9ee;
-      --paper: #ffffff;
-      --background: #f5f7f9;
-    }
+<title>Shivam Sharma | Academic Website</title>
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
+:root {
+  --ink: #202a35;
+  --muted: #667382;
+  --accent: #315b7d;
+  --line: #e3e8ed;
+  --paper: #ffffff;
+  --background: #f6f8fa;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      background: var(--background);
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.7;
-    }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
 
-    .container {
-      width: min(880px, calc(100% - 40px));
-      margin: 56px auto;
-      padding: 54px 64px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-    }
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
 
-    header {
-      padding-bottom: 30px;
-      border-bottom: 1px solid var(--line);
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2.2rem, 6vw, 3.1rem);
-      line-height: 1.15;
-      letter-spacing: -1.2px;
-      font-weight: 600;
-    }
+.page {
+  width: min(1000px, calc(100% - 40px));
+  margin: 42px auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 30px rgba(25, 45, 65, 0.04);
+  min-height: 650px;
+}
 
-    .subtitle {
-      margin: 12px 0 2px;
-      color: var(--accent);
-      font-size: 1.15rem;
-    }
+/* Profile header */
 
-    .institution {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
-    }
+.profile {
+  width: min(790px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 48px 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
 
-    section {
-      padding-top: 28px;
-    }
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
 
-    h2 {
-      margin: 0 0 12px;
-      color: var(--accent);
-      font-family: Arial, sans-serif;
-      font-size: 0.88rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
+.profile h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  line-height: 1.2;
+  font-weight: normal;
+  letter-spacing: 0;
+}
 
-    p {
-      margin: 0;
-    }
+.role {
+  margin: 8px 0 2px;
+  color: var(--accent);
+  font-size: 1.15rem;
+}
 
-    ul {
-      margin: 0;
-      padding-left: 22px;
-    }
+.affiliation {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
 
-    li {
-      padding: 2px 0;
-    }
+.email {
+  display: inline-block;
+  margin-top: 9px;
+  font-size: 1rem;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-    }
+.photo {
+  width: 145px;
+  height: 165px;
+  flex: 0 0 145px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+}
 
-    th, td {
-      padding: 10px 12px 10px 0;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top;
-    }
+/* Navigation */
 
-    th {
-      color: var(--muted);
-      font-family: Arial, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  background: white;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+nav button {
+  appearance: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  padding: 16px 23px;
+  color: var(--muted);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+nav button:hover,
+nav button[aria-selected="true"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
 
-    .contact p + p {
-      margin-top: 5px;
-    }
+/* Content */
 
-    footer {
-      margin-top: 38px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-style: italic;
-    }
+main {
+  width: min(790px, calc(100% - 64px));
+  margin: 0 auto;
+  min-height: 340px;
+}
 
-    @media (max-width: 640px) {
-      .container {
-        width: 100%;
-        margin: 0;
-        padding: 34px 24px;
-        border: 0;
-      }
+.panel {
+  display: none;
+  padding: 38px 0 50px;
+}
 
-      th, td {
-        padding-right: 8px;
-        font-size: 0.92rem;
-      }
-    }
-  </style>
+.panel.active {
+  display: block;
+}
+
+h2 {
+  margin: 0 0 18px;
+  color: var(--accent);
+  font-size: 1.35rem;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 13px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.list li {
+  padding: 3px 0;
+}
+
+/* Education */
+
+.edu {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.edu:last-child {
+  border-bottom: 0;
+}
+
+.year {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.institution {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* CV */
+
+.cv {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 9px 19px;
+  color: white;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.cv:hover {
+  color: var(--accent);
+  background: white;
+  text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  background: #fbfcfd;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+/* Mobile layout */
+
+@media (max-width: 650px) {
+
+  .page {
+    width: 100%;
+    margin: 0;
+    border: 0;
+  }
+
+  .profile {
+    width: calc(100% - 40px);
+    gap: 18px;
+    padding: 32px 0;
+  }
+
+  .photo {
+    width: 110px;
+    height: 130px;
+    flex-basis: 110px;
+  }
+
+  nav {
+    justify-content: center;
+    padding: 0 5px;
+  }
+
+  nav button {
+    padding: 13px 14px;
+    font-size: 1rem;
+  }
+
+  main {
+    width: calc(100% - 48px);
+  }
+
+  .panel {
+    padding: 32px 0 40px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .profile {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .photo {
+    width: 90px;
+    height: 110px;
+    flex-basis: 90px;
+  }
+
+  .profile h1 {
+    font-size: 1.8rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .affiliation {
+    font-size: 0.95rem;
+  }
+
+  .email {
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+  }
+
+  .edu {
+    grid-template-columns: 1fr;
+  }
+
+  .year {
+    grid-row: 2;
+  }
+
+  .institution {
+    grid-column: 1;
+  }
+}
+</style>
 </head>
 
 <body>
-  <main class="container">
 
-    <header>
-      <h1>Shivam Sharma</h1>
-      <p class="subtitle">MS Student | Mathematics and Computing</p>
-      <p class="institution">
+<div class="page">
+
+<!-- PROFILE HEADER -->
+
+<header class="profile">
+
+  <div class="profile-info">
+
+    <h1>Shivam Sharma</h1>
+
+    <p class="role">
+      MS Student | Mathematics and Computing
+    </p>
+
+    <p class="affiliation">
+      Indian Institute of Science Education and Research (IISER) Pune
+    </p>
+
+    <a class="email"
+       href="mailto:sharma.shivam@students.iiserpune.ac.in">
+      sharma.shivam@students.iiserpune.ac.in
+    </a>
+
+  </div>
+
+  <img
+    class="photo"
+    src="profile.jpg"
+    alt="Photograph of Shivam Sharma"
+  >
+
+</header>
+
+
+<!-- CLICKABLE NAVIGATION -->
+
+<nav role="tablist" aria-label="Website sections">
+
+  <button type="button"
+          role="tab"
+          id="tab-about"
+          aria-controls="about"
+          aria-selected="true"
+          data-panel="about">
+    About Me
+  </button>
+
+  <button type="button"
+          role="tab"
+          id="tab-education"
+          aria-controls="education"
+          aria-selected="false"
+          tabindex="-1"
+          data-panel="education">
+    Education
+  </button>
+
+  <button type="button"
+          role="tab"
+          id="tab-research"
+          aria-controls="research"
+          aria-selected="false"
+          tabindex="-1"
+          data-panel="research">
+    Research
+  </button>
+
+  <button type="button"
+          role="tab"
+          id="tab-cv"
+          aria-controls="cv"
+          aria-selected="false"
+          tabindex="-1"
+          data-panel="cv">
+    CV
+  </button>
+
+  <button type="button"
+          role="tab"
+          id="tab-contact"
+          aria-controls="contact"
+          aria-selected="false"
+          tabindex="-1"
+          data-panel="contact">
+    Contact
+  </button>
+
+</nav>
+
+
+<!-- SECTION CONTENT -->
+
+<main>
+
+  <!-- ABOUT ME: THE DEFAULT VISIBLE SECTION -->
+
+  <section class="panel active"
+           id="about"
+           role="tabpanel"
+           aria-labelledby="tab-about">
+
+    <h2>About Me</h2>
+
+    <p>
+      I am currently pursuing an MS in Mathematics and Computing
+      at IISER Pune. My academic interests lie in abstract algebra,
+      particularly Ring Theory and its applications in Cryptography.
+    </p>
+
+    <!-- Add more details about yourself here. -->
+
+  </section>
+
+
+  <!-- EDUCATION -->
+
+  <section class="panel"
+           id="education"
+           role="tabpanel"
+           aria-labelledby="tab-education"
+           hidden>
+
+    <h2>Education</h2>
+
+    <div class="edu">
+
+      <strong>MS Mathematics and Computing</strong>
+
+      <span class="year">2026–2028</span>
+
+      <span class="institution">
         Indian Institute of Science Education and Research (IISER) Pune
-      </p>
-    </header>
+      </span>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am currently in the first semester of MS in Mathematics and
-        Computing at IISER Pune. My academic interests lie in abstract
-        algebra, specifically Ring Theory and its applications in Cryptography.
-      </p>
-    </section>
+    </div>
 
-    <section id="education">
-      <h2>Education</h2>
+    <div class="edu">
 
-      <table>
-        <thead>
-          <tr>
-            <th>Qualification</th>
-            <th>Institution</th>
-            <th>Year</th>
-          </tr>
-        </thead>
+      <strong>B.Sc. (Hons.) Mathematics</strong>
 
-        <tbody>
-          <tr>
-            <td>MS Mathematics and Computing</td>
-            <td>IISER Pune</td>
-            <td>2026–2028</td>
-          </tr>
+      <span class="year">2023–2026</span>
 
-          <tr>
-            <td>B.Sc. (Hons.) Mathematics</td>
-            <td>University of Delhi</td>
-            <td>2023–2026</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <span class="institution">
+        University of Delhi
+      </span>
 
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Ring Theory</li>
-        <li>Number Theory</li>
-        <li>Cryptography</li>
-      </ul>
-    </section>
+    </div>
 
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <p><strong>Programming:</strong> Python, SageMath, Mathematica</p>
-      <p><strong>Other Skills:</strong> Problem Solving, Creative Writing</p>
-    </section>
+    <!-- Add more qualifications here. -->
 
-    <section id="languages">
-      <h2>Languages</h2>
-      <p>English · Hindi · Maithili · Bhojpuri</p>
-    </section>
+  </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:sharma.shivam@students.iiserpune.ac.in">
-          sharma.shivam@students.iiserpune.ac.in
-        </a>
-      </p>
-    </section>
 
-    <footer>Shivam Sharma | IISER Pune</footer>
+  <!-- RESEARCH -->
 
-  </main>
+  <section class="panel"
+           id="research"
+           role="tabpanel"
+           aria-labelledby="tab-research"
+           hidden>
+
+    <h2>Research Interests</h2>
+
+    <ul class="list">
+
+      <li>Ring Theory</li>
+      <li>Number Theory</li>
+      <li>Cryptography</li>
+
+    </ul>
+
+    <!-- Add research projects, publications and presentations here. -->
+
+  </section>
+
+
+  <!-- CV -->
+
+  <section class="panel"
+           id="cv"
+           role="tabpanel"
+           aria-labelledby="tab-cv"
+           hidden>
+
+    <h2>Curriculum Vitae</h2>
+
+    <p>
+      My CV contains further details about my education,
+      technical skills and academic background.
+    </p>
+
+    <a class="cv"
+       href="https://drive.google.com/file/d/1L4itAMqI7-j89zP4iOcQpTXU4VsugHLx/view?usp=drive_link"
+       target="_blank"
+       rel="noopener noreferrer">
+      View My CV
+    </a>
+
+  </section>
+
+
+  <!-- CONTACT: EMAIL ONLY -->
+
+  <section class="panel"
+           id="contact"
+           role="tabpanel"
+           aria-labelledby="tab-contact"
+           hidden>
+
+    <h2>Contact</h2>
+
+    <p>
+      Email:
+      <a href="mailto:sharma.shivam@students.iiserpune.ac.in">
+        sharma.shivam@students.iiserpune.ac.in
+      </a>
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+  Shivam Sharma | IISER Pune
+</footer>
+
+</div>
+
+
+<!-- TAB SWITCHING SCRIPT -->
+
+<script>
+
+const tabs = Array.from(
+  document.querySelectorAll('[role="tab"]')
+);
+
+const panels = Array.from(
+  document.querySelectorAll('[role="tabpanel"]')
+);
+
+function showPanel(panelId) {
+
+  tabs.forEach((tab) => {
+
+    const selected = tab.dataset.panel === panelId;
+
+    tab.setAttribute(
+      'aria-selected',
+      String(selected)
+    );
+
+    tab.tabIndex = selected ? 0 : -1;
+
+  });
+
+  panels.forEach((panel) => {
+
+    const selected = panel.id === panelId;
+
+    panel.classList.toggle('active', selected);
+
+    panel.hidden = !selected;
+
+  });
+
+}
+
+tabs.forEach((tab, index) => {
+
+  tab.addEventListener('click', () => {
+    showPanel(tab.dataset.panel);
+  });
+
+  tab.addEventListener('keydown', (event) => {
+
+    if (
+      event.key === 'ArrowRight' ||
+      event.key === 'ArrowLeft'
+    ) {
+
+      event.preventDefault();
+
+      const direction =
+        event.key === 'ArrowRight' ? 1 : -1;
+
+      const nextIndex =
+        (index + direction + tabs.length) % tabs.length;
+
+      tabs[nextIndex].focus();
+
+      showPanel(tabs[nextIndex].dataset.panel);
+
+    }
+
+  });
+
+});
+
+</script>
+
 </body>
 </html>
