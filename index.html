@@ -231,17 +231,17 @@
 
     /* Further section */
 
-   .further-quote {
-  margin: 0 0 8px;
-  font-size: 18px;
-  line-height: 1.7;
-}
+    .further-quote {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
 
-.quote-author {
-  margin: 0;
-  font-size: 16px;
-  color: var(--muted);
-}
+    .quote-author {
+      margin: 0;
+      font-size: 16px;
+      color: var(--muted);
+    }
 
     .further-photo {
       display: block;
@@ -405,6 +405,18 @@
           CV
         </button>
 
+        <!-- New Extracurriculars tab -->
+
+        <button class="tab"
+          id="tab-extracurriculars"
+          role="tab"
+          aria-selected="false"
+          aria-controls="extracurriculars"
+          tabindex="-1"
+          onclick="showPanel('extracurriculars', this)">
+          Extracurriculars
+        </button>
+
         <button class="tab"
           id="tab-contact"
           role="tab"
@@ -557,6 +569,19 @@
       </section>
 
 
+      <!-- Extracurriculars -->
+
+      <section class="panel"
+        id="extracurriculars"
+        role="tabpanel"
+        aria-labelledby="tab-extracurriculars"
+        hidden>
+
+        <h2>Extracurriculars</h2>
+
+      </section>
+
+
       <!-- Contact -->
 
       <section class="panel"
@@ -587,13 +612,13 @@
 
         <h2>Further</h2>
 
-      <p class="further-quote">
-  If it was so, it might be; and if it were so,
-  it would be but as it isn't, it ain't.
-  That's logic.
-</p>
+        <p class="further-quote">
+          If it was so, it might be; and if it were so,
+          it would be but as it isn't, it ain't.
+          That's logic.
+        </p>
 
-<p class="quote-author">— Lewis Carroll</p>
+        <p class="quote-author">— Lewis Carroll</p>
 
         <img
           src="further-photo.jpg"
